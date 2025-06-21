@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMK YAPPENDA JAKARTA UTARA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    .header, .navbar {
+      background-color: #004080;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    .header img, .navbar img {
+      margin-right: 15px;
+      border-radius: 5px;
+    }
+
+    .header span {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .navbar {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .grid-item {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 15px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .grid-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .grid-item img {
+      max-width: 100%;
+      height: 140px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .grid-item p {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #004080;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img src="https://smkyappenda.sch.id/wp-content/uploads/2024/06/logo-e1720184135184.png" width="50" height="50" alt="Logo SMK YAPPENDA">
+    <span>SMK YAPPENDA JAKARTA UTARA</span>
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div style="display: flex; align-items: center;">
+      <img src="https://smkyappenda.sch.id/wp-content/uploads/2024/06/logo-e1720184135184.png" width="40" height="40" alt="Logo SMK YAPPENDA">
+      <h2 style="margin: 0; font-size: 20px;">YAPPENDA</h2>
+    </div>
+    <nav>
+      <a href="#">Profil</a>
+      <a href="#">Jelajahi</a>
+      <a href="#">PPID</a>
+      <a href="#">Layanan</a>
+      <a href="#">Inovasi</a>
+      <a href="#">Publikasi</a>
+      <a href="#">Kontak</a>
+    </nav>
+  </div>
+
+  <!-- Grid Section -->
+  <div class="grid-container">
+    <div class="grid-item">
+      <a href="https://www.mrtekno.net/2016/01/pengenalan-rekayasa-perangkat-lunak.html">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVDce51p8OWLwpn6dlKyWqi7henGQ5PaLEwFBPmNVdXaIfdcDLsZGzWgOl6-qaKOmcLO74McMU3-AdN1yxnR4VTG_CvebeYPlt-aJaz7RHISyTGB1VH0ZrzowppAjSkcexzw6qN1ZnolA/s1600/rpl.png" alt="RPL">
+      </a>
+      <p>RPL</p>
+    </div>
+
+    <div class="grid-item">
+      <a href="https://tkjsmkn1sby.wordpress.com/tujuan-paket-keahlian-tkj/">
+        <img src="https://tkjsmkn1sby.wordpress.com/wp-content/uploads/2015/12/logo-jadi-tkj2.jpg" alt="TKJ">
+      </a>
+      <p>TKJ</p>
+    </div>
+
+    <div class="grid-item">
+      <a href="https://smkmusaga.sch.id/read/24/mplb">
+        <img src="https://smkmusaga.sch.id/media_library/posts/post-image-1710812737452.png" alt="MPLB">
+      </a>
+      <p>MPLB</p>
+    </div>
+
+    <div class="grid-item">
+      <a href="https://smkn1surakarta.sch.id/akuntansi-dan-keuangan-lembaga/">
+        <img src="https://smkn1surakarta.sch.id/wp-content/uploads/2021/06/AKL-yahya-750x458.png" alt="AKL">
+      </a>
+      <p>AKL</p>
+    </div>
+
+    <div class="grid-item">
+      <a href="https://smkn1surakarta.sch.id/akuntansi-dan-keuangan-lembaga/">
+        <img src="https://www.smkmuhbulakamba.sch.id/media_library/posts/post-image-1612413523684.png" alt="TKR">
+      </a>
+      <p>TKR</p>
+    </div>
+
+    <div class="grid-item">
+      <a href="https://smkkencana.id/program-keahlian/teknik-bisnis-sepeda-motor/">
+        <img src="https://smkkencana.id/wp-content/uploads/2021/09/TEKNIK-BISNIS-SEPEDA-MOTOR.png" alt="TBSM">
+      </a>
+      <p>TBSM</p>
+    </div>
+  </div>
+
+  <!-- JS untuk animasi fade-in -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const items = document.querySelectorAll('.grid-item');
+      items.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add('visible');
+        }, index * 150);
+      });
+    });
+  </script>
+
+</body>
+</html>
